@@ -1,0 +1,304 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.jumbotron {
+  background-image: url('jumbotron-bg.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.deskripsi-jumbotron {
+  background: black;
+  padding: 20px;
+  position: relative;
+  width: 40%;
+  border: 5px solid #BB8141;
+  left: 20%;
+  top: 30%;
+  height: auto;
+  float: left;
+  z-index: 2;
+}
+
+.gambar-jumbotron {
+  position: relative;
+  /* background-color: black; */
+  left: 10%;
+  top: 40%;
+  width: 30%;
+  /* height: 300px; */
+  float: left;
+  z-index: 1;
+}
+
+.container {
+  margin: auto;
+  margin-top: 0;
+  background: black;
+  height: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.button {
+  text-decoration: none !important;
+}
+
+.previous {
+  padding: 10px;
+  position: absolute;
+  right: -3vh;
+  top: 10vh;
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.next {
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 10vh;
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.next:hover {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.previous:hover {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+#about {
+  height: 100vh;
+  position: relative;
+  background-image: url('tentangku-bg.jpg');
+  background-size: cover;
+}
+
+.tentangku-title {
+  color: #383B3E;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  top: 20%;
+  height: auto;
+  float: left;
+  z-index: 2;
+}
+
+#pendidikan {
+  height: 100vh;
+  position: relative;
+  background-image: url('pendidikan-bg.png');
+  background-size: cover;
+}
+
+.pendidikan-deskripsi {
+  /* background: black; */
+  position: relative;
+  top: 20%;
+  left: 250px;
+  font-size: 40px;
+  color: black;
+  -webkit-text-fill-color: #628797; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.pendidikan-text {
+  color: white;
+  background: #046307;
+  border: 8px solid #BB8141;
+  position: relative;
+  top: 20%;
+  left: 5%;
+  width: 40%;
+  font-size: 30px;
+}
+
+.li-text {
+
+  font-size: 20px;
+  margin: 0;
+}
+
+#jadwal {
+  height: 100vh;
+  position: relative;
+}
+
+#aktivitas {
+  background: #FFC5BF;
+  height: 100vh;
+  position: relative;
+}
+
+.aktivitas-title {
+  font-size: 60px;
+}
+
+#menuToggle
+{
+
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 99;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  width: 300px;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  z-index: -1;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}

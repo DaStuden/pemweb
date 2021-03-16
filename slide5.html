@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing into an HTML Element with JavaScript</title>
+</head>
+<body>
+    <p id="greet"></p>
+    <p id="result"></p>
+
+    <script>
+        // CHANGE INNER HTML/TEXT FROM ELEMENT THAT HAVE ID = "greet"
+        document.getElementById("greet").innerHTML = "Hello Gatot!";
+
+        // DEFINE VARIABLE
+        var x = 50;
+        var y = 30;
+        var sum = x + y;
+
+        // CHANGE INNER HTML/TEXT FROM ELEMENT THAT HAVE ID = "result"
+        document.getElementById("result").innerHTML = sum;
+    </script>
+</body>
+</html>

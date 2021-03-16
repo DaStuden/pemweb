@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- TOMBOL CEK NILAI -->
+    <input type="button" name="cek" value="Cek Nilai" onclick="cek()">
+
+    
+    <script>
+      function cek()
+      {
+        // AMBIL DATA VARIABLE NILAI START
+        nilai = window.prompt("Masukkan Nilai Anda (0-100) : ");
+        // AMBIL DATA VARIABLE NILAI END
+
+        // MENDEFINISIKAN VARIABLE HASIL START
+        hasil = "";
+        // MENDEFINISIKAN VARIABLE HASIL END
+
+        // MENGHINDARI NILAI DILUAR RANGE
+        if (nilai > 100 || nilai < 0)
+        {
+          hasil = "diluar range!";
+        }
+
+        // JIKA NILAI LEBIH DARI A
+        else if (nilai > 80)
+        {
+          hasil = "A";
+        }
+
+        // JIKA NILAI LEBIH DARI AB
+        else if (nilai > 70)
+        {
+          hasil = "AB";
+        }
+
+        // JIKA NILAI LEBIH DARI B
+        else if (nilai > 65)
+        {
+          hasil = "B";
+        }
+
+        // JIKA NILAI LEBIH DARI BC
+        else if (nilai > 60)
+        {
+          hasil = "BC";
+        }
+
+        // JIKA NILAI LEBIH DARI C
+        else if (nilai > 55)
+        {
+          hasil = "C";
+        }
+
+        // JIKA NILAI LEBIH DARI D
+        else if (nilai > 40)
+        {
+          hasil = "D";
+        }
+
+        // JIKA NILAI LEBIH DARI E
+        else
+        {
+          hasil = "E";
+        }
+
+        // MENGELUARKAN ALERT HASIL
+        alert("Nilai Anda "+hasil);
+      }
+    </script>
+  </body>
+</html>
